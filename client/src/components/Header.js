@@ -11,7 +11,7 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google"></a>
+            <a href="/auth/google">Login</a>
           </li>
         );
       default:
@@ -30,7 +30,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <nav>
         <div className="nav-wrapper">
@@ -41,7 +40,9 @@ class Header extends Component {
           >
             Emaily
           </Link>
-          <ul className="right">{this.renderContent()}</ul>
+          <ul id="nav-mobile" className="right">
+            {this.renderContent()}
+          </ul>
         </div>
       </nav>
     );
